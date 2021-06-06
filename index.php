@@ -26,15 +26,17 @@ if(isset($_POST['btn-login']))
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Login</title>
-<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" type="text/css"  />
+<title>Sign in</title>
+<!-- <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" type="text/css"  /> -->
 <link rel="stylesheet" href="style.css" type="text/css"  />
 </head>
 <body>
-<div class="container">
-     <div class="form-container">
+<?php require 'navigation.php';?>
+
+<div class="container-login">
+     <div class="wrapper-login">
         <form method="post">
-            <h2>Login</h2><hr />
+            <h2>Sign in</h2>
             <?php
             if(isset($error))
             {
@@ -45,20 +47,20 @@ if(isset($_POST['btn-login']))
                   <?php
             }
             ?>
-            <div class="form-group">
+            <!-- <div class="form-group"> -->
              <input type="text" class="form-control" name="txt_uname_email" placeholder="Username or E mail ID" required />
-            </div>
-            <div class="form-group">
+            <!-- </div>
+            <div class="form-group"> -->
              <input type="password" class="form-control" name="txt_password" placeholder="Your Password" required />
-            </div>
+            <!-- </div>
             <div class="clearfix"></div><hr />
-            <div class="form-group">
-             <button type="submit" name="btn-login" class="btn btn-block btn-primary">
+            <div class="form-group"> -->
+             <button type="submit" name="btn-login" id="submit" class="btn btn-block btn-primary">
                  <i class="glyphicon glyphicon-log-in"></i>&nbsp;Login
                 </button>
-            </div>
+            <!-- </div> -->
             <br />
-            <label>Don't have account yet ! <a href="sign-up.php">Sign Up</a></label>
+            <label class="options">Don't have account yet ! <a href="sign-up.php">Sign Up</a></label>
         </form>
        </div>
 </div>

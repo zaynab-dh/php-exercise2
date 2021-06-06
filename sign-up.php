@@ -62,14 +62,15 @@ if(isset($_POST['btn-signup']))
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Sign up : cleartuts</title>
-<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" type="text/css"  />
+<!-- <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" type="text/css"  /> -->
 <link rel="stylesheet" href="style.css" type="text/css"  />
 </head>
 <body>
-<div class="container">
-     <div class="form-container">
+<?php require 'navigation.php';?>
+<div class="container-login">
+     <div class="wrapper-login">
         <form method="post">
-            <h2>Sign up.</h2><hr />
+            <h2>Register</h2>
             <?php
             if(isset($error))
             {
@@ -91,23 +92,23 @@ if(isset($_POST['btn-signup']))
                  <?php
             }
             ?>
-            <div class="form-group">
+            <!-- <div class="form-group"> -->
             <input type="text" class="form-control" name="txt_uname" placeholder="Enter Username" value="<?php if(isset($error)){echo $uname;}?>" />
-            </div>
-            <div class="form-group">
+            <!-- </div>
+            <div class="form-group"> -->
             <input type="text" class="form-control" name="txt_umail" placeholder="Enter E-Mail ID" value="<?php if(isset($error)){echo $umail;}?>" />
-            </div>
-            <div class="form-group">
+            <!-- </div>
+            <div class="form-group"> -->
              <input type="password" class="form-control" name="txt_upass" placeholder="Enter Password" />
-            </div>
-            <div class="clearfix"></div><hr />
-            <div class="form-group">
-             <button type="submit" class="btn btn-block btn-primary" name="btn-signup">
+            <!-- </div> -->
+            <!-- <div class="clearfix"></div><hr />
+            <div class="form-group"> -->
+             <button type="submit" class="btn btn-block btn-primary" name="btn-signup" id="submit">
                  <i class="glyphicon glyphicon-open-file"></i>&nbsp;SIGN UP
                 </button>
-            </div>
+            <!-- </div> -->
             <br />
-            <label>have an account ! <a href="index.php">Sign In</a></label>
+            <label class="options">have an account ! <a href="index.php">Sign In</a></label>
         </form>
        </div>
 </div>

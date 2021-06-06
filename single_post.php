@@ -31,14 +31,17 @@ $fetch_singlePost = $post->readPostById($id);
 
 <div class="card-body">
 
+<div class="allcard">
+
+		
+
+	<h3 style=font-family:cursive; class="mb-4"><?php echo $fetch_singlePost->title; ?></h3>
 
 
-<h3 style=font-family:cursive; class="mb-4"><?php echo $fetch_singlePost->title; ?></h3>
+	<a class="btn edit btn-primary mb-4" href="edit_post.php?id=<?php echo $fetch_singlePost->id;?>">Edit</a>
+	<a class="btn delete btn-danger mb-4" href="delete_post.php?id=<?php echo $fetch_singlePost->id; ?>">Delete</a>
 
+	<p class="posts" style=font-family:roboto;><?php echo $fetch_singlePost->content; ?></p>
 
-<a class="btn btn-primary mb-4" href="edit_post.php?id=<?php echo $fetch_singlePost->id;?>">Edit</a>
-<a class="btn btn-danger mb-4" href="delete_post.php?id=<?php echo $fetch_singlePost->id; ?>">Delete</a>
-
-<p style=font-family:roboto;><?php echo $fetch_singlePost->content; ?></p>
-
+</div>
 </div>

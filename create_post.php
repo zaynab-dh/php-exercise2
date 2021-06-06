@@ -51,7 +51,7 @@ if (isset($_GET['empty'])) {
 		</script>
 	</div>
 
-	<button name="publish" class="btn btn-primary ">Publish</button>
+	<button id="submit" name="publish" class="btn btn-primary ">Publish</button>
 
 </form>
 

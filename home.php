@@ -13,23 +13,38 @@ $userRow=$stmt->fetch(PDO::FETCH_ASSOC);
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" type="text/css"  />
+<!-- <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" type="text/css"  /> -->
 <link rel="stylesheet" href="style.css" type="text/css"  />
 <title>welcome - <?php print($userRow['user_email']); ?></title>
 </head>
 
 <body>
 
-<div class="header">
+<div id="section-landing">
+<nav class="top-nav">
+        <ul>
+            <li class="navv">
+            <a class="btn btn-outline-primary" href="blog.php">Blog</a>
+            <a class="btn btn-outline-primary" href="sign-up.php">Register</a>
+            <label><a href="logout.php?logout=true"> logout</a></label>
+            </li>
+        </ul>
+    </nav>
+    <div class="wrapper-landing">
+        welcome : <?php print($userRow['user_name']); ?>
+    </div>
+</div>
+
+<!-- <div class="header">
  <div class="left">
  <label><a href="blog.php"><i class="glyphicon glyphicon-log-out"></i> Blog</a></label>
     </div>
     <div class="right">
      <label><a href="logout.php?logout=true"><i class="glyphicon glyphicon-log-out"></i> logout</a></label>
     </div>
-</div>
-<div class="content">
-welcome : <?php print($userRow['user_name']); ?>
-</div>
+</div> -->
+<!-- <div class="content">
+welcome : 
+</div> -->
 </body>
 </html>

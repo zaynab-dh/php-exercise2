@@ -37,7 +37,7 @@ $id = $_GET['id'];
 		<textarea name="content" required cols="150" rows="10" ><?php echo $edit_post->content; ?></textarea>
 	</div>
 
-	<button name="update" class="btn btn-primary ">Update</button>
+	<button id="submit" name="update" class="btn btn-primary ">Update</button>
 
 </form>
 
